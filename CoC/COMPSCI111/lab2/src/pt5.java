@@ -1,12 +1,15 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class pt4 {
+public class pt5 {
+    public static int dealer;
+    public static int player;
+    public static int pscore = 0;
+    public static int dscore = 0;
     public static void main(String[] args) {
-        Random rand = new Random();
-        Scanner input = new Scanner(System.in);
-        int dealer;
-        int player;
+        final Random rand = new Random();
+        final Scanner input = new Scanner(System.in);
+        do {
         int rand1 = rand.nextInt(101);
         dealer = rand1;
         System.out.println("Enter a value between 0 and 100");
@@ -19,15 +22,25 @@ public class pt4 {
             System.out.print("Dealer distance: ");
             System.out.println(calcD);
             System.out.print("Player distance: ");
-            System.out.println(calcP);
+            System.out.println(calcP + "\n");
+            dscore ++;
         }
         if (calcP < calcD) {
             System.out.println("Player wins");
             System.out.print("Dealer distance: ");
-            System.out.println(calcP);
+            System.out.println(calcD);
             System.out.print("Player distance: ");
-            System.out.println(calcP);
+            System.out.println(calcP + "\n");
+            pscore ++;
         }
-        input.close();
+        if (calcP == 0) {
+            input.close();
+            System.out.println("\n\nYou found the magic number!\n");
+            System.out.println("Dealer won " + dscore + " times.");
+            System.out.println("You won " + pscore + " times.\n");
+            break;
+        }
+        } while (true);
+        
     }
 }

@@ -1,0 +1,137 @@
+pt 1:
+
+public class pt1 {
+    public static void main(String[] args) throws Exception {
+        //Find area of circle
+        double rad = 2.5;
+        var area = 3.14159 * rad * rad;
+        System.out.println(area);
+    }
+}
+
+res: 19.6349375
+
+pt 2:
+
+public class pt2 {
+    //print 3 tic tac toe results with the spacing increasing each time
+    public static void main(String[] args) {
+        System.out.println("010\n100\n001\n\n");
+        System.out.println("  0  0  0\n\n  1  1  1  \n\n  1  0  1\n\n");
+        System.out.println("    0    1    1\n\n\n    0    0    0\n\n\n    1    1    0");
+    }
+}
+
+res: 010
+100
+001
+
+
+  0  0  0
+
+  1  1  1
+
+  1  0  1
+
+
+    0    1    1
+
+
+    0    0    0
+
+
+    1    1    0
+
+pt 3: 
+
+public class pt3 {
+    public static void main(String[] args) {
+        //find area of triangle
+        var base = 3.5;
+        var height = 4.85;
+        var triangle = (base*height)/2;
+        System.out.println(triangle);
+    }
+}
+
+res: 8.487499999999999
+
+pt 4:
+
+public class pt4 {
+    public static void main(String[] args) {
+        //convert miles to kilometers
+        var miles = 60;
+        var mtk = 1.60934;
+        System.out.println(miles*mtk);
+    }
+}
+
+res: 96.5604
+
+pt 5:
+
+
+
+public class pt5 {
+    public static void main(String[] args) {
+        //Write a sequence of cout statements to display your initials (2 – 3 letters) using a cool pattern for each letter.
+       System.out.println("SR");
+       System.out.println("S.r");
+       System.out.println("s.R");
+       System.out.println("S.R.");
+       System.out.println("╭━━━┳━━━╮\n┃╭━╮┃╭━╮┃\n┃╰━━┫╰━╯┃\n╰━━╮┃╭╮╭╯\n┃╰━╯┃┃┃╰╮\n╰━━━┻╯╰━╯");
+       System.out.println("       SSSS   RRRR\n       SS     R  R\n         SS   RRR\n       SSSS   R  R");
+       System.out.println("       SSSSSSSSSSSSSSS RRRRRRRRRRRRRRRRR   \n     SS:::::::::::::::SR::::::::::::::::R  \n    S:::::SSSSSS::::::SR::::::RRRRRR:::::R \n    S:::::S     SSSSSSSRR:::::R     R:::::R\n    S:::::S              R::::R     R:::::R\n    S:::::S              R::::R     R:::::R\n     S::::SSSS           R::::RRRRRR:::::R \n      SS::::::SSSSS      R:::::::::::::RR  \n        SSS::::::::SS    R::::RRRRRR:::::R \n           SSSSSS::::S   R::::R     R:::::R\n                S:::::S  R::::R     R:::::R\n                S:::::S  R::::R     R:::::R\n    SSSSSSS     S:::::SRR:::::R     R:::::R\n    S::::::SSSSSS:::::SR::::::R     R:::::R\n    S:::::::::::::::SS R::::::R     R:::::R\n     SSSSSSSSSSSSSSS   RRRRRRRR     RRRRRRR");
+    }
+}
+
+res: SR
+S.r
+s.R
+S.R.
+╭━━━┳━━━╮
+┃╭━╮┃╭━╮┃
+┃╰━━┫╰━╯┃
+╰━━╮┃╭╮╭╯
+┃╰━╯┃┃┃╰╮
+╰━━━┻╯╰━╯
+       SSSS   RRRR
+       SS     R  R
+         SS   RRR
+       SSSS   R  R
+       SSSSSSSSSSSSSSS RRRRRRRRRRRRRRRRR
+     SS:::::::::::::::SR::::::::::::::::R
+    S:::::SSSSSS::::::SR::::::RRRRRR:::::R
+    S:::::S     SSSSSSSRR:::::R     R:::::R
+    S:::::S              R::::R     R:::::R
+    S:::::S              R::::R     R:::::R
+     S::::SSSS           R::::RRRRRR:::::R
+      SS::::::SSSSS      R:::::::::::::RR
+        SSS::::::::SS    R::::RRRRRR:::::R
+           SSSSSS::::S   R::::R     R:::::R
+                S:::::S  R::::R     R:::::R
+                S:::::S  R::::R     R:::::R
+    SSSSSSS     S:::::SRR:::::R     R:::::R
+    S::::::SSSSSS:::::SR::::::R     R:::::R
+    S:::::::::::::::SS R::::::R     R:::::R
+     SSSSSSSSSSSSSSS   RRRRRRRR     RRRRRRR
+
+pt 6:
+
+import java.util.Scanner;
+
+public class pt6 {
+    public static void main(String[] args) {
+        //Have user enter a number, then double it
+        System.out.println("Enter a number");
+        Scanner input = new Scanner (System.in);
+        int number = input.nextInt();
+        System.out.println("Double " + number + " = " + (number * 2));
+        input.close();
+    }    
+}
+
+res: Enter a number
+2
+Double 2 = 4
