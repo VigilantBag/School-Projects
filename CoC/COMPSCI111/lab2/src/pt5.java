@@ -2,10 +2,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class pt5 {
-    public static int dealer;
-    public static int player;
-    public static int pscore = 0;
-    public static int dscore = 0;
+    private static int dealer;
+    private static int player;
+    private static int pscore = 0;
+    private static int dscore = 0;
     public static void main(String[] args) {
         final Random rand = new Random();
         final Scanner input = new Scanner(System.in);

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class pt1 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         //Conditioned statement for age input
         System.out.println("Ticket is $14");
         System.out.println("What is your age?");
