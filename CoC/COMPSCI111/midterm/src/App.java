@@ -24,6 +24,7 @@ public class App {
         System.out.flush();
         Thread.sleep(2000);
         int winlose = 0;
+        int horserun=4;
         int money=200;
         int racerun=0;
         int efplace=0;
@@ -42,15 +43,19 @@ public class App {
         int win4=5;
         int play=1;
         int cheat=0;
-        String hrn = "Horse numbers: [0,1,2,3]\n";
+        int operator=0;
         String fph = "Choose 1st Place Horse: ";
         String sph = "Choose 2nd Place Horse: ";
         String tph = "Choose 3rd Place Horse: ";
-        Integer[] arr = new Integer[4];
         Scanner input = new Scanner(System.in);
 do {
     do {
                     System.out.println("~~Main Menu~~");
+                    Integer[] arr = new Integer[horserun];
+                    for (int i = 0; i < arr.length; i++) {
+                        arr[i] = i;
+                    }
+                    String hrn = "Horses: " + Arrays.toString(arr);
                     System.out.println("You have $" + money);
                     if (money <= 0) {
                         System.out.println("You have run out of money. Submitting bet.\n\n");
@@ -64,7 +69,7 @@ do {
                         System.out.println("9)    SUBMIT BET");
                         choice = input.nextInt();
                     }
-;
+
                     switch (choice) {
                         case 1:
                             money = money-10;
@@ -118,14 +123,18 @@ do {
                                 win2 = arr[1];
                                 win3 = arr[2];
                                 win4 = arr[3];
-                                System.out.println("Press (1) to return to main menu");
-                                if (play == 1) {
-                                    cheat = 1;
-                                    break;
-                                } else {
-                                    cheat = 1;
-                                    break;
+                                System.out.println("1)    Add/Subtract Contestants");
+                                System.out.println("9)    Return to main menu");
+                                operator = input.nextInt();
+                                if (operator==1) {
+                                    System.out.print("Input number of horses: ");
+                                    horserun = input.nextInt();
+                                    arr = new Integer[horserun];
+                                    for (int i = 0; i < arr.length; i++) {
+                                        arr[i] = i;
+                                    }
                                 }
+                                break;
                             } else {
                                 System.out.println("This race's results:");
                                 System.out.println(Arrays.toString(arr));
