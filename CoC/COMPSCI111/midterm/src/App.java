@@ -162,6 +162,22 @@ do {
             }
             System.out.println("Play again? (0,1)");
             play = input.nextInt();
+             winlose = 0;
+             racerun=0;
+             efplace=0;
+             esplace=0;
+             ebfplace=0;
+             ebsplace=0;
+             tfplace=0;
+             tsplace=0;
+             ttplace=0;
+             tbfplace=0;
+             tbsplace=0;
+             tbtplace=0;
+             win1=5;
+             win2=5;
+             win3=5;
+             win4=5;
             System.out.print("\033[H\033[2J");  
             System.out.flush();
 } while (play == 1);
