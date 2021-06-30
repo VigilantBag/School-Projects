@@ -1,3 +1,8 @@
+# MIDTERM
+
+## Code
+
+```java
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -5,7 +10,7 @@ public class App {
     //Not my best code. This is for school.
     private static final String CLS = "\033[H\033[2J";
     private static final String BM9 = "Bet Machine 9000";
-    private static final String HORSE = "horse ";
+    private static final String HORSE = "horse";
     private static int choice;
     public static void main(String[] args) throws Exception{
         System.out.print(CLS);  
@@ -54,11 +59,10 @@ do {
     do {
                     System.out.println("~~Main Menu~~");
                     Integer[] arr = new Integer[horserun];
-                    Integer[] arrl = arr;
-                    for (int i = 0; i < arrl.length; i++) {
-                        arrl[i] = i;
+                    for (int i = 0; i < arr.length; i++) {
+                        arr[i] = i;
                     }
-                    String hrn = "Horses: " + Arrays.toString(arrl);
+                    String hrn = "Horses: " + Arrays.toString(arr);
                     System.out.println("You have $" + money);
                     if (money <= 0) {
                         System.out.println("You have run out of money. Submitting bet.\n\n");
@@ -114,8 +118,8 @@ do {
                             tbtplace = input.nextInt();
                                 break;
                         case 8:
-                        cheat = 1;
-                            if (cheat == 1) {
+
+                            if (cheat == 0) {
                                 System.out.println("This race's results:");
                                 for (int i = 0; i < arr.length; i++) {
                                     arr[i] = i;
@@ -132,15 +136,9 @@ do {
                                 if (operator==1) {
                                     System.out.print("Input number of horses: ");
                                     horserun = input.nextInt();
-                                    if (horserun < 3) {
-                                        System.out.println("Please enter a higher number");
-                                        Thread.sleep(2000);
-                                        horserun = 4;
-                                        }
-                                    } else {
-                                        arr = new Integer[horserun];
-                                        for (int i = 0; i < arr.length; i++) {
-                                            arr[i] = i;
+                                    arr = new Integer[horserun];
+                                    for (int i = 0; i < arr.length; i++) {
+                                        arr[i] = i;
                                     }
                                 }
                                 break;
@@ -238,3 +236,120 @@ do {
 input.close();
     } 
 }
+```
+
+## Terminal
+
+```text
+~~Main Menu~~
+You have $200
+1)    Exacta Bet ($10)     
+2)    Exactabox Bet ($5)   
+3)    Trifecta Bet ($25)   
+4)    Trifectabox Bet ($20)
+8)    Operator Menu        
+9)    SUBMIT BET
+1
+Horses: [0, 1, 2, 3]    
+Choose 1st Place Horse: 1
+Choose 2nd Place Horse: 2
+~~Main Menu~~
+You have $190
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+4
+Horses: [0, 1, 2, 3]
+Choose 1st Place Horse: 1
+Choose 2nd Place Horse: 2
+Choose 3rd Place Horse: 3
+~~Main Menu~~
+You have $170
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+9
+~~Main Menu~~
+You have $320
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+8
+This race's results:
+[2, 1, 3, 0]
+1)    Add/Subtract Contestants
+9)    Return to main menu     
+1
+Input number of horses: 10
+~~Main Menu~~
+You have $320
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+8
+This race's results:
+[8, 7, 1, 3, 4, 0, 9, 5, 6, 2]
+1)    Add/Subtract Contestants
+9)    Return to main menu
+9
+~~Main Menu~~
+You have $320
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+1
+Horses: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Choose 1st Place Horse: 8
+Choose 2nd Place Horse: 7
+~~Main Menu~~
+You have $310
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+3
+Horses: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Choose 1st Place Horse: 8
+Choose 2nd Place Horse: 7
+Choose 3rd Place Horse: 1
+~~Main Menu~~
+You have $285
+1)    Exacta Bet ($10)
+2)    Exactabox Bet ($5)
+3)    Trifecta Bet ($25)
+4)    Trifectabox Bet ($20)
+8)    Operator Menu
+9)    SUBMIT BET
+9
+YOU WON THE EXACTA BET!
+
+YOU WON THE TRIFECTA BET!
+
+Winning positions:
+First : horse 8
+Second: horse 7
+Third: horse 1
+Fourth: horse 3
+
+Final Balance: $585
+
+Play again? (0,1)
+0
+```
