@@ -1,26 +1,28 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
-
 public class App {
     //Not my best code. This is for school.
-    static int choice;
+    private static final String CLS = "\033[H\033[2J";
+    private static final String BM9 = "Bet Machine 9000";
+    private static final String HORSE = "horse";
+    private static int choice;
     public static void main(String[] args) throws Exception{
-        System.out.print("\033[H\033[2J");  
+        System.out.print(CLS);  
         System.out.flush(); 
-        System.out.println("Bet machine 9000");
+        System.out.println(BM9);
         Thread.sleep(1000);
-        System.out.print("\033[H\033[2J");  
-        System.out.flush(); 
-        Thread.sleep(1000);
-        System.out.println("Bet machine 9000");
-        Thread.sleep(1000);
-        System.out.print("\033[H\033[2J");  
+        System.out.print(CLS);  
         System.out.flush(); 
         Thread.sleep(1000);
-        System.out.println("Bet machine 9000");
+        System.out.println(BM9);
         Thread.sleep(1000);
-        System.out.print("\033[H\033[2J");  
+        System.out.print(CLS);  
+        System.out.flush(); 
+        Thread.sleep(1000);
+        System.out.println(BM9);
+        Thread.sleep(1000);
+        System.out.print(CLS);  
         System.out.flush();
         Thread.sleep(2000);
         int winlose = 0;
@@ -164,7 +166,7 @@ do {
                         default:
                         System.out.println("Please choose a number from the list. Returning to Main Menu...");
                         Thread.sleep(5000);
-                        System.out.print("\033[H\033[2J");  
+                        System.out.print(CLS);  
                         System.out.flush();
                         Thread.sleep(500);
                             break;
@@ -191,14 +193,14 @@ do {
                 money = money+150;
                 winlose++;
             }
-            else if (winlose == 0) {
+            if (winlose == 0) {
                 System.out.println("You lost $" + (200-money));
             }
             System.out.println("Winning positions: ");
-            System.out.println("First : " + "Horse " + win1);
-            System.out.println("Second: " + "Horse " + win2);
-            System.out.println("Third: " + "Horse " + win3);
-            System.out.println("Fourth: " + "Horse " + win4 + "\n");
+            System.out.println("First : " + HORSE + win1);
+            System.out.println("Second: " + HORSE + win2);
+            System.out.println("Third: " + HORSE + win3);
+            System.out.println("Fourth: " + HORSE + win4 + "\n");
             System.out.println("Final Balance: $" + money + "\n");
             if (money <= 0) {
                 System.out.println("You have run out of money.");
@@ -223,7 +225,7 @@ do {
              win3=5;
              win4=5;
              cheat=0;
-            System.out.print("\033[H\033[2J");  
+            System.out.print(CLS);  
             System.out.flush();
 } while (play == 1);
 input.close();
