@@ -41,6 +41,7 @@ public class App {
         int win3=5;
         int win4=5;
         int play=1;
+        int cheat=0;
         String hrn = "Horse numbers: [0,1,2,3]\n";
         String fph = "Choose 1st Place Horse: ";
         String sph = "Choose 2nd Place Horse: ";
@@ -59,6 +60,7 @@ do {
                         System.out.println("2)    Exactabox Bet ($5)");
                         System.out.println("3)    Trifecta Bet ($25)");
                         System.out.println("4)    Trifectabox Bet ($20)");
+                        System.out.println("8)    Operator Menu");
                         System.out.println("9)    SUBMIT BET");
                         choice = input.nextInt();
                     }
@@ -103,19 +105,52 @@ do {
                             System.out.print(tph);
                             tbtplace = input.nextInt();
                                 break;
+                        case 8:
+
+                            if (cheat == 0) {
+                                System.out.println("This race's results:");
+                                for (int i = 0; i < arr.length; i++) {
+                                    arr[i] = i;
+                                }
+                                Collections.shuffle(Arrays.asList(arr));
+                                System.out.println(Arrays.toString(arr));
+                                win1 = arr[0];
+                                win2 = arr[1];
+                                win3 = arr[2];
+                                win4 = arr[3];
+                                System.out.println("Press (1) to return to main menu");
+                                if (play == 1) {
+                                    cheat = 1;
+                                    break;
+                                } else {
+                                    cheat = 1;
+                                    break;
+                                }
+                            } else {
+                                System.out.println("This race's results:");
+                                System.out.println(Arrays.toString(arr));
+                                cheat = 1;
+                                break;
+                            }
+                            
         
                         case 9:
-                            for (int i = 0; i < arr.length; i++) {
-                                arr[i] = i;
-                            }
-                            Collections.shuffle(Arrays.asList(arr));
-                            //System.out.println(Arrays.toString(arr));
-                            win1 = arr[0];
-                            win2 = arr[1];
-                            win3 = arr[2];
-                            win4 = arr[3];
+                        if (cheat == 0) {
+                            
+                                for (int i = 0; i < arr.length; i++) {
+                                    arr[i] = i;
+                                }
+                                Collections.shuffle(Arrays.asList(arr));
+                                //System.out.println(Arrays.toString(arr));
+                                win1 = arr[0];
+                                win2 = arr[1];
+                                win3 = arr[2];
+                                win4 = arr[3];
+                                racerun++;
+                            
+                        }else{
                             racerun++;
-                                break;
+                        }        break;
         
                         default:
                         System.out.println("Please choose a number from the list. Returning to Main Menu...");
@@ -178,6 +213,7 @@ do {
              win2=5;
              win3=5;
              win4=5;
+             cheat=0;
             System.out.print("\033[H\033[2J");  
             System.out.flush();
 } while (play == 1);
