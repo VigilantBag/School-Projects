@@ -1,4 +1,4 @@
-package com.vigilantbag;
+package com.vigilantbag.btcexchange;
 
 import org.junit.jupiter.api.Test;
 

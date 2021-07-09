@@ -1,4 +1,4 @@
-package com.vigilantbag;
+package com.vigilantbag.btcexchange;
 
 import java.util.Map;
 
