@@ -1,6 +1,7 @@
 #
 # Standard Maven .gitignore
 #
+test/java/com/vigilantbag/btcexchange/
 target/
 pom.xml.tag
 pom.xml.releaseBackup

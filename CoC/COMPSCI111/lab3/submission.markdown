@@ -1,3 +1,6 @@
+# Lab 3
+
+```java
 package com.vigilantbag.btcexchange;
 
 import java.nio.charset.Charset;
@@ -92,3 +95,96 @@ public class App {
         System.exit(0);
     }
 }
+```
+
+```text
+~~Menu~~
+
+buy 
+sell
+price
+balance
+ledger
+help
+exit
+
+>price
+Current BTC price is: $32938.0
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>buy 2
+You have bought 2 BTC
+Remaining USD balance: $34124.0
+Remaining BTC balance: ฿2.0
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>sell 1
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>help
+buy #BTC     (amount of BTC to purchase)     Buy BTC with USD
+sell #BTC      (amount of BTC to sell)     Sell BTC for USD
+price    Lists current BTC price in USD
+balance     Displays balance of coins (USD and BTC)
+ledger     Displays ledger of transactions
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>balance
+USD: $67062.0
+BTC: ₿1.0
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>ledger
+[(Type: Purchase Date: 2021-07-14 BTC: ฿ at USD: $32938.0) , (Type: Sell Date: 2021-07-14 BTC: ₿1.0 at USD: $32938.0) ]
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>exit
+```
