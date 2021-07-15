@@ -1,3 +1,13 @@
+# Final
+
+## Multi coin support
+
+## Coins
+
+* BTC
+* XMR
+
+```java
 package com.vigilantbag.btcexchange;
 
 import java.nio.charset.Charset;
@@ -154,3 +164,175 @@ public class App {
         System.exit(0);
     }
 }
+```
+
+```text
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>buy 4
+You have bought 4 BTC
+Remaining USD balance: $-26176.0
+Remaining BTC balance: ₿4.0
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>price
+Current BTC price is: $31544.0
+Choose coin
+Coins: BTC, XMR
+XMR
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>price
+Current XMR price is: $194.27
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>sell 2
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>ledger
+[(Type: Purchase Date: 2021-07-15 BTC: ₿4 at USD: $31544.0) , (Type: Sell Date: 2021-07-15 BTC: ₿2.0 at USD: $31544.0) ]
+Choose coin
+Coins: BTC, XMR
+XMR
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>buy 5
+You have bought 5 XMR
+Remaining USD balance: $35940.65
+Remaining XMR balance: XMR5.0
+Choose coin
+Coins: BTC, XMR
+XMR
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>sell 2
+Choose coin
+Coins: BTC, XMR
+XMR
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>balance
+USD: $36329.19
+XMR: XMR3.0
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>balance
+USD: $36329.19
+BTC: ₿2.0
+Choose coin
+Coins: BTC, XMR
+XMR
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>ledger
+[(Type: Purchase Date: 2021-07-15 BTC: ₿4 at USD: $31544.0) , (Type: Sell Date: 2021-07-15 BTC: ₿2.0 at USD: $31544.0) , (Type: Purchase Date: 2021-07-15 XMR: XMR5 at USD: $194.27) , (Type: Sell Date: 2021-07-15 XMR: XMR2.0 at USD: $194.27) ]
+Choose coin
+Coins: BTC, XMR
+BTC
+~~Menu~~
+
+buy
+sell
+price
+balance
+ledger
+help
+exit
+
+>exit
+```
